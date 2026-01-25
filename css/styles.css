@@ -126,6 +126,7 @@ header {
 		url(../images/hero.png);
 	height: 600px;
 	top: 80px;
+	max-width:100%;
 }
 .slogan h1 {
 	color: rgb(255, 255, 255);
