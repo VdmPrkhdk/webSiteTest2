@@ -64,17 +64,21 @@ header {
 	display: flex;
 	justify-content:space-around;
 	align-items: center;
-	flex-wrap: wrap;
-	border: 1px solid black
+	flex-wrap: wrap;	
 }
 .main-nav {
 	display: flex;
-	gap: 50px;
+	gap: 30px;
+}
+.main-nav a{
+	position: relative;
+	transition: box-shadow 0.25s ease;
 }
 .main-nav a:hover,
 .main-nav a:focus {
 	color: #2196f3;
 	background-color: #ffffff;
+	box-shadow: 0 2px 0.5px rgba(33, 150,243, 0.9);
 }
 .main-nav a:active {
 	color: #1168af;
@@ -291,8 +295,13 @@ flex: 0 1 370px;
 .social-icon img:hover {
 	filter: brightness(0) invert(1);
 }
-.container {
-	padding: 70px 0;
+.container ul{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+	justify-content: center;
+	padding: 50px 0;
+
 }
 .container h2 {
 	display: flex;
@@ -306,12 +315,7 @@ flex: 0 1 370px;
 	margin-bottom: 40px;
 }
 .container ul li {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 170px;
-	height: 90px;
-	margin: 30px;
+	padding: 20px 30px;
 	border: 1px solid rgb(175, 177, 184);
 	border-radius: 4px;
 	transition: transform 0.1s ease;
@@ -363,11 +367,17 @@ flex: 0 1 370px;
 footer {
 	display: flex;
 	background-color: #2f303a;
-	padding: 50px;
-	padding-left: 120px;
+
 }
 .footer-container {
+	padding: 20px 10px;
+	width: 100%;
 	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	border: 2px solid white;
+
+
 }
 footer h3 {
 	font-family: 'Roboto';
@@ -375,7 +385,7 @@ footer h3 {
 	font-weight: 700;
 	line-height: 16px;
 	letter-spacing: 3%;
-	text-transform: lowercase;
+	text-transform: uppercase;
 	color: #ffffff;
 }
 .foot-bg-logo {
@@ -411,6 +421,7 @@ footer h3 {
 .icon-footer {
 	gap: 10px;
 	display: flex;
+	align-items: center;
 }
 .social-icon-footer {
 	width: 40px;
