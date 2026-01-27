@@ -67,12 +67,13 @@ header {
 .header-container {
 	display: flex;
 	justify-content:space-around;
-	align-items: center;
+	align-items:center;
 	flex-wrap: wrap;	
 }
 .main-nav {
 	display: flex;
 	gap: 30px;
+	padding-left: 0;
 }
 .main-nav a{
 	transition: box-shadow 0.25s ease;
@@ -116,9 +117,18 @@ header {
 		align-items: flex-start;
 		gap: 10px;
 	}
+	.contact-nav ul{
+		padding-left: 0;
+	}
+	.icon-footer{
+		padding-top: 10px;
+	}
 }
 @media (max-width: 767px)
 {
+	.header-container{
+		justify-content: left;
+	}
 	.contact-nav ul{
 		display: flex;
 		align-items: center;
@@ -131,6 +141,12 @@ header {
 	}
 	.logo{
 		padding: 10px 0 0 0;
+	}
+	.main-nav li{
+		display: flex;
+		justify-content: left;
+	}
+		
 	}
 	.main-nav a {
 		border-radius: 10px;
