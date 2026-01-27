@@ -43,10 +43,12 @@ button {
 	padding: 0;
 	margin: 0;
 }
+
+
+/* style to header */
 .logo {
 	font-family: 'Raleway';
 	font-size: 26px;
-	/* font-weight: 700; */
 	line-height: 31px;
 	letter-spacing: 3%;
 	text-align: left;
@@ -56,6 +58,8 @@ button {
 	color: #2196f3;
 }
 header {
+	display: flex;
+	justify-content: space-around;
 	padding: 0 15px;
 	max-width: 100%;
 	align-content: center;
@@ -71,7 +75,6 @@ header {
 	gap: 30px;
 }
 .main-nav a{
-	position: relative;
 	transition: box-shadow 0.25s ease;
 }
 .main-nav a:hover,
@@ -86,12 +89,17 @@ header {
 }
 .contact-nav ul {
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	gap: 30px;
 	top: 15px;
 }
 .container-contact {
+	display: flex;
+	align-items: center;
 	color: #757575;
+}
+.text-contact{
+	display: inline;
 }
 .container-contact:hover,
 .container-contact:focus {
@@ -101,6 +109,35 @@ header {
 .container-contact:active {
 	color: #1168af;
 	background-color: #ffffff;
+}
+@media(max-width: 875px){
+	.contact-nav ul{
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 10px;
+	}
+}
+@media (max-width: 767px)
+{
+	.contact-nav ul{
+		display: flex;
+		align-items: center;
+	}
+	.text-contact{
+		display: none;
+	}
+	.container-contact{
+		margin: 2px;
+	}
+	.logo{
+		padding: 10px 0 0 0;
+	}
+	.main-nav a {
+		border-radius: 10px;
+		margin: 0;
+		padding: 5px;
+		box-shadow: 0 2.5px 0px rgba(33, 150, 243, 0.9);
+	}
 }
 /* ----------------------------------------------------------------------------------- */
 .button-slogan {
