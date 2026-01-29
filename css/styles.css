@@ -8,6 +8,8 @@ body {
 	font-family: 'Roboto', 'Raleway', 'san-serif';
 	color: #757575;
 	line-height: 1.5;
+	font-size: clamp(14px, 2vw, 18px);
+	
 }
 img {
 	max-width: 100%;
@@ -45,7 +47,7 @@ button {
 }
 
 
-/* style to header */
+/* =========style to header============= */
 .logo {
 	font-family: 'Raleway';
 	font-size: 26px;
@@ -66,6 +68,7 @@ header {
 }
 .header-container {
 	display: flex;
+	gap: 50px;
 	justify-content:space-around;
 	align-items:center;
 	flex-wrap: wrap;	
@@ -111,7 +114,8 @@ header {
 	color: #1168af;
 	background-color: #ffffff;
 }
-@media(max-width: 875px){
+
+@media(max-width: 940px){
 	.contact-nav ul{
 		flex-direction: column;
 		align-items: flex-start;
@@ -147,7 +151,6 @@ header {
 		justify-content: left;
 	}
 		
-	}
 	.main-nav a {
 		border-radius: 10px;
 		margin: 0;
@@ -155,7 +158,12 @@ header {
 		box-shadow: 0 2.5px 0px rgba(33, 150, 243, 0.9);
 	}
 }
-/* ----------------------------------------------------------------------------------- */
+@media (max-width: 519px){
+	.header-container{
+		gap: 10px;;
+	}
+}
+/* ================HEROES SECTION============ */
 .button-slogan {
 	background-color: #2196f3;
 	border-radius: 4px;
@@ -202,7 +210,7 @@ text-align: center;
 	transform: none;
 	margin: 0 0 30px 0;
 }
-/* ------------------------------------------------------------------- */
+/* ==================PRIORITI SECTION================== */
 .prioriti-container {
 	padding: 94px 0;
 }
@@ -264,7 +272,7 @@ text-align: center;
 flex: 0 1 370px;
 }
 
-/*-----------------------------------------------*/
+/*================TEAM SECTION=======================*/
 .team {
 	background-color: #f5f4fa;
 	padding: 50px 0;
@@ -348,6 +356,7 @@ flex: 0 1 370px;
 .social-icon img:hover {
 	filter: brightness(0) invert(1);
 }
+/*========PARTNERS SECTION================*/
 .container ul{
 	display: flex;
 	flex-wrap: wrap;
@@ -384,9 +393,6 @@ flex: 0 1 370px;
 	transform: scale(1.1);
 }
 
-.portfolio {
-	margin: 0 auto;
-}
 .portfolio button {
 	border: 0;
 	border-radius: 4px;
@@ -410,14 +416,9 @@ flex: 0 1 370px;
 .portfolio img {
 	margin: 0;
 }
-.portfolio li {
-	margin: 30px;
-}
-.but-portf li {
-	margin: 8px;
-	top: 300px;
-}
+/*===========FOOTER SECTION===============*/
 footer {
+	margin-top: 50px;
 	display: flex;
 	background-color: #2f303a;
 
@@ -497,31 +498,56 @@ footer h3 {
 .social-icon-footer img:hover {
 	filter: brightness(0) invert(1);
 }
-.button-portfolio1 {
-	height: 38px;
-	width: 73px;
-	margin-top: 84px;
+.btnSelection ul{
+	display: flex;
+	flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+padding: 0;
+margin: 50px 0 30px;
+gap: 1.5em;
+
 }
-.button-portfolio2 {
-	height: 38px;
-	width: 128px;
-	margin-top: 84px;
+.but-portf button{
+	display: flex;
+	padding: 10px 20px;
 }
-.button-portfolio3 {
-	height: 38px;
-	width: 145px;
-	margin-top: 84px;
+
+/* .boxPortfolio ul{
+	display: flex;
+	flex-wrap: wrap;
+justify-content: space-around;
+margin: 0;
+padding: 0;
+} */
+/* =============PORTFOLIO GIRD================= */
+.boxPortfolio{
+	width: min(1200px, 92%);
+	margin: 0 auto;
 }
-.button-portfolio4 {
-	height: 38px;
-	width: 103px;
-	margin-top: 84px;
+.list-portfolio{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	
+
+	display: grid;
+	grid-template-columns: repeat(auto-fit,
+	minmax(clamp(160px, 22vw, 370px), 1fr));
+	gap: clamp(20px, 2.5vw, 30px);
 }
-.button-portfolio5 {
-	height: 38px;
-	width: 130px;
-	margin-top: 84px;
+.boxPortfolio ul li{
+	transition: transform 0.1s ease ;
+	border-radius: 10px;
 }
+.boxPortfolio ul li:hover,
+.boxPortfolio ul li:focus{
+	transform: scale(1.1);
+	border: 2px solid rgb(90, 190, 230);
+	
+}
+/* -------------------------------------------------------------------------------------- */
+
 .icon {
 	display: inline-block;
 	width: 32px;
