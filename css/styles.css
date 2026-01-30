@@ -5,10 +5,14 @@
 	font-style: normal;
 }
 body {
+	display: flex;
+	flex-direction: column;
 	font-family: 'Roboto', 'Raleway', 'san-serif';
 	color: #757575;
 	line-height: 1.5;
 	font-size: clamp(14px, 2vw, 18px);
+	margin: 0;
+	padding: 0;
 	
 }
 img {
@@ -44,6 +48,11 @@ button {
 	align-items: center;
 	padding: 0;
 	margin: 0;
+}
+main,
+section{
+	flex: 1;
+	padding-bottom: 20px;
 }
 
 
@@ -130,6 +139,10 @@ header {
 }
 @media (max-width: 767px)
 {
+	.footer-container{
+		display: flex;
+		flex-direction: column;
+	}
 	.header-container{
 		justify-content: left;
 	}
@@ -418,7 +431,8 @@ flex: 0 1 370px;
 }
 /*===========FOOTER SECTION===============*/
 footer {
-	margin-top: 50px;
+	margin:0;
+	padding: 0;
 	display: flex;
 	background-color: #2f303a;
 
@@ -429,9 +443,6 @@ footer {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
-	border: 2px solid white;
-
-
 }
 footer h3 {
 	font-family: 'Roboto';
@@ -512,14 +523,6 @@ gap: 1.5em;
 	display: flex;
 	padding: 10px 20px;
 }
-
-/* .boxPortfolio ul{
-	display: flex;
-	flex-wrap: wrap;
-justify-content: space-around;
-margin: 0;
-padding: 0;
-} */
 /* =============PORTFOLIO GIRD================= */
 .boxPortfolio{
 	width: min(1200px, 92%);
@@ -588,4 +591,52 @@ padding: 0;
 	height: 70px;
 	z-index: 2;
 	position: relative;
+}
+
+/*====================FORM-CONTACT==================*/
+.boxContact{
+	display: flex;
+	height: 100%;
+	padding: 100px 0;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+			url(../images/contact/desktopContact.png);
+			max-width: 100%;
+				background-size: cover;
+				background-position: top center;
+				background-repeat: no-repeat;
+				justify-content: center;
+}
+.form-contact{
+	width: clamp(280px, 90vw, 500px);
+	max-width: 500px;
+	margin-top: 60px;
+	display: flex;
+	flex-direction: column;
+	/* align-items: center; */
+	border: 2px solid blueviolet;
+	gap: 18px;
+}
+
+input {
+	width: 80%;
+  padding: 10px;
+	font-family: inherit;
+	border: none;
+	border-radius: 4px;
+	box-shadow: 0 1px 17px #0a0000;
+}
+label {
+	text-transform: uppercase;
+	display: flex;
+	flex-direction: column;
+	margin: 10px 0 10px;
+	color: #abd0f3;
+	font-weight: 500;
+}
+.form-contact button{
+	margin-top: 10px;
+	padding: 10px 20px;
+	border-radius: 5px;
+	box-shadow: 0 1px 17px #0a0000;
+	color: #0c304d;
 }
